@@ -1,0 +1,124 @@
+@import "@/styles/variables.scss";
+
+.homeSection {
+  width: 700px;
+  height: 900px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // background-color: #839f9f;
+  background-image: $backgrount-gradient;
+  font-family: $font-inter;
+}
+
+.homeImage {
+  margin-top: 48px;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  img {
+    border: 3px solid #5f7474;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+  }
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.homeImage:after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  left: 0;
+  background-color: #95b6b6;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.HomeCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: map-get($gap, xl);
+  color: #5f7474;
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: map-get($gap, xl);
+    justify-content: center;
+    &__socials {
+      gap: map-get($gap, lg);
+      a {
+        svg {
+          color: #5f7474;
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+  &__intro {
+    width: 100%;
+    h2 {
+      font-size: map-get($text-size, xxl);
+      display: flex;
+      justify-content: center;
+      span {
+        color: $primary-accent-color;
+      }
+    }
+    h3 {
+      font-size: map-get($text-size, xl);
+      display: flex;
+      justify-content: center;
+      span {
+        color: $primary-accent-color;
+      }
+    }
+    &__skills {
+      min-height: map-get($m, xxxl);
+      min-width: $bp-sm/1.4;
+      margin-top: map-get($gap, lg);
+      h1 {
+        font-size: map-get($text-size, xxl);
+        display: flex;
+        justify-content: center;
+        color: $primary-accent-color;
+      }
+    }
+    p {
+      font-size: map-get($text-size, md);
+      margin-top: map-get($gap, lg);
+    }
+  }
+  &__actions {
+    padding-top: map-get($gap, xxxxl);
+    width: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: map-get($gap, xl);
+    a {
+      text-decoration: none;
+    }
+  }
+}

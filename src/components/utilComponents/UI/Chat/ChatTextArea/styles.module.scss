@@ -1,0 +1,41 @@
+@import "@/styles/variables.scss";
+
+.textarea {
+  margin: 48px 0px 48px 0px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  gap: 42px 20px;
+  overflow: auto;
+  //   background-color: #72726a;
+  .messageWrapper {
+    .message {
+      padding: 16px;
+      display: flex;
+      line-height: 1.7;
+    }
+  }
+  .avatar {
+    align-self: flex-end;
+    background-color: rgb(219, 219, 215);
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+    // overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: -26px;
+  }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

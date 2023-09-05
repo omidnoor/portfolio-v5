@@ -1,0 +1,58 @@
+@import "@/styles/variables.scss";
+
+.container {
+  height: 900px;
+  font-family: $font-inter;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  // background-image: url("/textures/bg-gradients-v1.jpg");
+  :hover {
+    cursor: pointer;
+  }
+  p {
+    font-size: 24px;
+    color: #3c4a4a;
+    margin-bottom: 4px;
+  }
+  h2,
+  h3,
+  ul {
+    color: #3c4a4a;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 2px 0 2px 16px;
+  }
+
+  .lib,
+  .name,
+  .description {
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #a6a6ab;
+    display: flex;
+    flex-direction: column;
+  }
+  .lib {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
+    a {
+      margin: 0 8px;
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #5f7474;
+      }
+    }
+  }
+}
